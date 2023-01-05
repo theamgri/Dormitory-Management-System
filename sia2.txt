@@ -1,0 +1,22 @@
+Service Request progress:
+
+1. So every click sa button kay naay record na mag pakita.
+
+NEED UG ADD BUTTON:
+
+-Visitors(Done)
+-Tenants(DONE)
+-Renew ng Contract(Done)
+-Creation of Contract(Done)
+-Create ng service request(Done)
+-Add profile for tenants(Done)
+-Payment Activity(PRADO)
+
+
+-Tenant Log Status(DONE)
+-Pag sort sa renewal contract ug bago na contract(D NA NEED)
+-Paano i process ang Leave request(PRADO)
+-FORMAT SA CONTRACT and CONTRACT RENEWAL
+-Format sa service request(DONE)
+
+transaction for payment(IDK UNSAON PA)
