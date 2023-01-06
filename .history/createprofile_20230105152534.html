@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <title>Create Tenant Profile</title>
+</head>
+<body>
+  
+    <div class="h-10 w-full bg-scroll bg-cover bg-bottom" style="height: 50rem; background-image: url(/assets/background.png);">
+        <h1 class="font-Montserrat font-bold leading-tight text-4xl mt-0 mb-2" style="text-align:center; color: #22215B; padding-top:0%; padding-left: 10;">Create Tenant Profile</h1>
+    
+    
+          <div class="pt-4 mx-auto w-64 text-center ">
+            <div class="relative w-64">
+            <img class="w-64 h-64 rounded-full absolute" src="data:image/png;base64,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" alt="" />
+            <div class="w-64 h-64 group hover:bg-gray-200 opacity-60 rounded-full absolute flex justify-center items-center cursor-pointer transition duration-500">
+                <label class="cursor-pointer mt-6">
+              <img class="hidden group-hover:block w-12" src="https://www.svgrepo.com/show/33565/upload.svg" alt="" />
+                <input type='file' class="hidden" :multiple="multiple" :accept="accept" />
+              </label> 
+
+              
+            </div>
+            </div>
+
+           
+          </div>
+          <form style="float:center">
+          <div style="text-align: center; margin-top: 23%">
+            <h1 class="font-bold text-2xl">Upload Profile Picture</h1>
+            <h1 class="font-bold text-gray-400 py-2">Room No. 5</h1>
+            
+            </div>
+            <div class="text-center">
+                <label for="name" class="text-sm font-semibold font-Montserrat" style="margin-left: -12rem; color: #888888">Firstname</label>
+                <label for="name" class="text-sm font-semibold font-Montserrat" style="margin-left: 17rem; color: #888888">Lastname</label>
+            </div>
+       <div class="text-center pt-4">
+            <input type="fname" id="email" style="height: 3rem; width:20rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+            <input type="lname" id="email" style="height: 3rem; width:20rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+        </div>
+        <div class="text-center pt-4">
+          <label for="email" class="text-sm font-semibold font-Montserrat" style="margin-left: -35rem; color: #888888">Email</label>
+          <input type="email" name="email" id="email" style="height: 3rem; width:53%; margin-left: 19.3rem;" class="mt-4 ml-6 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+
+
+          <label for="password" class="pt-4 text-sm font-semibold font-Montserrat" style="margin-left: -33.5rem; color: #888888">Password</label>
+          <input type="password" name="email" id="email" style="height: 3rem; width:53%; margin-left: 19.3rem;" class="mt-4 ml-6 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+        
+          <div class="text-center">
+            <label for="tstatus" class="text-sm font-semibold font-Montserrat" style="margin-left: -12rem; color: #888888">Status</label>
+            <label for="ttyoe" class="text-sm font-semibold font-Montserrat" style="margin-left: 17rem; color: #888888">Type of Tenant</label>
+        </div>
+   <div class="text-center pt-4">
+        <input type="status" id="status" style="height: 3rem; width:20rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+        <input type="tenanttype" id="tenanttype" style="height: 3rem; width:20rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+        
+      </div>
+
+      <div class="text-center pt-4">
+        <label for="add" class="text-sm font-semibold font-Montserrat" style="margin-left: -35rem; color: #888888">Address</label>
+        <input type="address" name="email" id="email" style="height: 3rem; width:53%; margin-left: 19.5rem;" class="mt-4 ml-6 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+      </div>
+
+      <div class="text-center">
+        
+        <label for="phnum" class="text-sm font-semibold font-Montserrat" style="margin-left: -32.5rem; color: #888888">Phone Number</label>
+    </div>
+    <div class="text-center pt-4">
+        <input type="status" id="status" style="height: 3rem; width:20rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+        <input type="tenanttype" id="tenanttype" style="height: 3rem; width:20rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
+      
+
+  </div>
+  <label for="phnum" class="text-sm font-semibold font-Montserrat" style="margin-top: 2%; margin-left: -32.5rem; color: #888888">Upload Contract</label>
+  
+  <div class="mt-2 flex items-center justify-center w-full">
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-60 h-50 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Drop Contract Here...</p>
+        </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+    </label>
+  </div> 
+  
+    <div>
+    <button onclick="location.href='#'" type="submit" class="mt-6 text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-md px-10 py-2.5 sm:text-center " style="margin-left: 0rem; background-color:#ADDDD0; height: 3rem; width: 20rem;">Send Contract</button>
+  </div>
+    <button onclick="location.href='#'" type="submit" class="mt-6 text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-md px-10 py-2.5 sm:text-center " style="margin-left: 0rem; background-color:#ADDDD0; height: 3rem; width: 20rem;">Create Profile</button>
+  
+
+       
+    </form>
+  </div>
+      
+
+          
+   
+</body>
+</html>
+
