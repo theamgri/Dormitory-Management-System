@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <title>Service Request</title>
+
+    <nav class="bg-white border-b-2 border-gray-200 px-2 sm:px-4 py-1 rounded dark:bg-gray-100">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="/" class="flex sm:items-left">
+              <img src="/assets/logo.png" class="h-11" alt="KM Logo" /> 
+              <span class="self-center align-middle pl-2 text-2xl font-Montserrat font-bold whitespace-nowrap" style="color: #22215B">Kuya Mic's Dormitory </span>
+          </a>
+          
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+              
+              <li>
+                <a href="#" class="block font-bold bg-gray-100 font-Montserrat text-base md:p-4" aria-current="page" style="color: #22215B; margin-left:-35rem;">Service Request</a>
+              </li>
+              <li>
+                <a href="index.html" class="block font-Montserrat rounded text-base md:text-gray-700 md:p-4" aria-current="page">Admin</a>
+              </li>
+              <li>
+                <a href="home.html" class="block shadow-xl bg-gray-100 font-Montserrat rounded-3xl text-base md:text-gray-700 md:p-4" aria-current="page">Dashboard</a>
+              </li>
+              <li>
+                <a href="home.html" class="block py-2 pl-0 pr-4" aria-current="page"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" class="h-1 mr-3 sm:h-10" alt="KM Logo" /></a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+</head>
+<body>
+    <h1 class="text-left pl-8 font-medium">Pending Service Requests</h1>
+    <div class="sm:text-center pb-6">
+        <button onclick="location.href='#'" type="submit" class="mt-6 text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-md px-10 py-2.5 sm:text-center " style="margin-left: 0rem; background-color:#22215B; height: 5rem; width: 50rem;">Create Service Request</button>
+      </div>
+
+      <div class="max-w-xl place-items-center rounded overflow-hidden shadow-lg" style="background-color: #ee1a1a80;">
+        <div class="px-6 py-4">
+            <div class="border-b-2 font-bold text-sm mb-2">Service Request #1:
+            <div class="inline-block font-bold text-xl mb-2">Water Leakage</div>
+            <div class="border-l-2 pl-4 inline-block font-bold text-xl mb-2">Status:</div>
+        
+        <p1 class="inline-block" style="color: rgb(253, 229, 16)">in progress</p1>
+        </div>
+        <p1 class="font-semibold text-md"style="color:black">PROGRESS:</p1>
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            
+            <div class="text-xs font-medium text-center p-0.5 leading-none rounded-full" style="color:black; background-color:aquamarine ;width: 45%"> 45%</div>
+          </div>
+          <button onclick="location.href='#'" type="submit" class="shadow-xl float-right mt-6 text-black bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg font-semibold text-sm px-10 py-2.5 sm:text-center " style="background-color:#ADDDD0; height: 2.5rem; width: 15rem;">Update Progress</button>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            
+            <div class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Progress Report</div>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+          </div>
+      </div>
+</body>
+</html>
