@@ -45,19 +45,22 @@
         <div class="text-center pt-4">
             
                 <div class="pt-4">
-                    <label for="username" class="inline-block sm:text-4xl text-sm font-medium text-gray-900" style="color: #22215B; ">Username</label>
+                    <label for="username" id="username" class="inline-block sm:text-4xl text-sm font-medium text-gray-900" style="color: #22215B; ">Username</label>
                     <input type="lname" style="height: 5rem; width:40rem;" class="inline-block ml-6 block p-3.5 bg-gray-10 text-gray-900 sm:text-2xl rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
                 </div>
                 
                 <div class="sm:ml-1.5 pt-4">
-                    <label for="password" class="sm:inline-block sm:text-4xl sm:font-medium text-gray-900" style="color: #22215B;">Password</label>
+                    <label for="password" id="password"class="sm:inline-block sm:text-4xl sm:font-medium text-gray-900" style="color: #22215B;">Password</label>
                     <input type="password" style="height: 5rem; width:40rem;" class="inline-block block ml-6 p-3.5 bg-gray-10 text-gray-900 sm:text-2xl rounded-xl block dark:bg-gray-100 dark:placeholder-gray-400">
                     
                   </div>
               
                   <div class="sm:text-center pb-6">
-                  <button onclick="location.href='home.html'" type="submit" class="mt-8 text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-2xl text-2xl px-10 py-2.5 sm:text-center " style="background-color:#ADDDD0; height: 5rem; width: 15rem;">LOGIN
+                  <button type="submit" class="mt-8 text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-2xl text-2xl px-10 py-2.5 sm:text-center " style="background-color:#ADDDD0; height: 5rem; width: 15rem;">LOGIN
+                 <?php 
                  
+                 
+                 ?>
 
                 </button>
                 </div>
