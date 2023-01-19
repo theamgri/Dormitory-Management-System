@@ -58,8 +58,19 @@
                   <div class="sm:text-center pb-6">
                   <button type="submit" class="mt-8 text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-2xl text-2xl px-10 py-2.5 sm:text-center " style="background-color:#ADDDD0; height: 5rem; width: 15rem;">LOGIN
                  <?php 
-                 
-                 
+                  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    session_start();
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
+                      
+                    $conn = mysqli_connect('localhost', 'root', '', 'kmdormitory');
+                    
+                    if ($conn->connect_errno) {
+                    
+                      printf("Failed to connect to database: %/s", $conn->connect_errno);
+                      exit();
+                    }
+                    
                  ?>
 
                 </button>
@@ -71,5 +82,7 @@
 </html>
 
 
+<?php 
 
+?>
 
