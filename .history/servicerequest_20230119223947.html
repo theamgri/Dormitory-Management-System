@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/flowbite@1.5.5/dist/datepicker.js"></script>
     <link rel="stylesheet" href="./public/tailwind.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,17 +73,16 @@
                   
                 
               </div>
-              <p1 class="ml-4 font-mono font-semibold text-md"style="color: #817171">PROGRESS:</p1>
-              <div class="mr-4 mt-4 ml-4 block max-w-screen mb-4 h-10 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div class="mr-4 block max-w-screen mb-4 h-10 bg-gray-200 rounded-full dark:bg-gray-700">
             
-                <div class="font-mono text-sm h-10 font-semibold text-center p-3 leading-none rounded-full" style="color:rgb(255, 255, 255); width: 0%"> 0%</div>
+                <div class="font-mono text-sm h-10 font-semibold text-center p-3 leading-none rounded-full" style="color:black; background-color: #39E469 ;width: 0%"> 0%</div>
               
               </div>
               
-              <button type="submit" class="mr-4 border-2 border-gray-500 font-mono inline-block float-right drop-shadow-xl text-xl bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg font-normal text-sm px-2 sm:text-center " style="background-color:#ADDDD0; height: 2.5rem; width: 10rem;">Add to list</button>
+              <button type="submit" class="font-mono inline-block float-right shadow-xl text-black bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg font-normal text-sm px-2 sm:text-center " style="background-color:#ADDDD0; height: 2.5rem; width: 10rem;">Update Progress</button>
             
 
-              <div class="mb-4 ml-4 content-center text-center inline-block ">
+              <div class="mb-4 content-center text-center inline-block ">
             
                 <ul class="inline-block list-none ">
                   <li>
@@ -104,25 +102,9 @@
                     <th>
                       <a href="#!" class="font-medium text-gray-800" style="color: #817171">Room #</a>
                     </th>
-                    <th></th><select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-20 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B; margin-top: 1rem;" placeholder="Mode of Payment">
-                      <option>--</option> 
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                      </th></select>
-                    
-                     
-                    
+                    <th>
+                      <a href="#!" class="font-medium text-gray-800">10</a>
+                    </th>
                     
                   </tr>
                     
@@ -136,11 +118,7 @@
                             <a href="#!" class="font-medium text-gray-800" style="color: #817171">Date Issued:</a>
                           </th>
                           <th>
-                           
-      
-                              <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-                            
-                            <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 pl-10 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-900" placeholder="Select date" style="color: #22215B;";>
+                            <a href="#!" class="font-medium text-gray-800">10/12/23</a>
                           </th>
                           
                         </tr>
@@ -166,7 +144,7 @@
                                   </div>
             </div>
               <!-- Modal footer -->
-              <div class="block px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+              <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
                   <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close or ESC</button>
               </div>
           </div>
