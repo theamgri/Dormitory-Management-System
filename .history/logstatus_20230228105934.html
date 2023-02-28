@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/datepicker.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <title>Tenant Log Status</title>
+
+
+    <nav class="bg-white border-gray-200 px-2 lg:px-4 py-1 rounded dark:bg-gray-100">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="https://flowbite.com/" class="flex items-left">
+              <img src="/assets/logo.png" class="h-11" alt="KM Logo" /> 
+              <span class="self-center align-middle pl-2 text-2xl font-Montserrat font-bold whitespace-nowrap" style="color: #22215B">Kuya Mic's Dormitory </span>  
+          </a>
+          
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+              <li>
+                <a href="login.html" class="block bg-blue-700 font-Montserrat rounded text-xl md:bg-transparent md:text-blue-700 md:p-4" aria-current="page" style="color: #5A5B6A">Logout</a>
+              </li>
+              <li>
+                <a href="home.html" class="block shadow-xl bg-gray-100 font-Montserrat rounded-3xl text-base md:text-gray-700 md:p-4" aria-current="page">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4" aria-current="page"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" class="h-1 mr-3 sm:h-10" alt="KM Logo" /></a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+</head>
+<body>
+    <div class="w-full bg-cover bg-bottom" style="height: 80rem; background-image: url(/assets/background.png);">
+        <table id="table" class="table-fixed" style="background-color: #adddd075; border-radius: 1rem;">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name of Tenant</th>
+                <th>Subject:</th>
+                <th>Status:</th>
+              </tr>
+            </thead>
+           
+            <tbody>
+              <tr>
+                <td><input id="date" datepicker type="text" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" placeholder="Select date" style="color: #22215B;";></td>
+                <td><input id="name" type="text" style="height: 3rem; width:20rem;" placeholder="Name of Tenant" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400"></td>
+                <td><input id="subject" type="text" style="height: 3rem; width:20rem;" placeholder="Type of Subject" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400"></td>
+                <td><select class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" style="color: #22215B;">
+                    <option>--</option> 
+                    <option>Log in</option>
+                    <option>Log out</option>
+                </select></td>
+            </tr>
+             
+            </tbody>
+            <thead>
+              <tr><th><button onclick="addRow()" type="submit" class="border-2 border-slate-700 drop-shadow-2xl mt-1 mb-1 text-xl text-white bg-primary-600 font-medium rounded-xl text-md px-10 py-0 sm:text-center" style="background-color:#22215B; height: 2.5rem; width: 20rem;">+ Add Log Status</button></th></tr>
+                <tr>
+                    <th>Date</th>
+                    <th>Name of Tenant</th>
+                    <th>Subject</th>
+                    <th>Status</th>
+                    
+                  </tr>
+                 
+            </thead>
+            <tbody>
+                <tr class="font-Montserrat">
+                    <td class="text-center">12/12/23</td>
+                    <td class="text-center">Rue Bennet</td>
+                    <td class="text-center">Contract Submission</td>
+                    <td class="text-center">Logged in</td>
+                </tr>
+                <tr>
+                    <td class="text-center">12/12/23</td>
+                    <td class="text-center">Rue Bennet</td>
+                    <td class="text-center">Contract Submission</td>
+                    <td class="text-center">Logged in</td>
+                </tr>
+                <script>
+                  //function para maka add ng row inside table
+                  function addRow() {
+                var tableRow = document.getElementById("table");
+                var info1 = document.getElementById("date");
+                var info1 = document.getElementById("name");
+                var info1 = document.getElementById("subject");
+                var row = document.createElement("tr");
+                var cell1 = document.createElement("td");
+                var cell2 = document.createElement("td");
+                var cell3 = document.createElement("td");
+                 cell1.innerHTML = info1;
+                 cell2.innerHTML = info2;
+                 cell3.innerHTML = info3;
+                 row.appendChild(cell1);
+                 row.appendChild(cell2);
+                 row.appendChild(cell3);
+                 tableRow.appendChild(row);
+                }
+                </script>
+            </tbody>
+          </table>
+      
+
+
+
+          </div>  
+</body>
+</html>
+
