@@ -38,14 +38,34 @@
       </nav>
 </head>
 <body>
-  <div class="h-screen w-full shadow-xl rounded-lg flex overflow-x-auto custom-scrollbar" style="background-color: #22215B;">
-    
+  <div class="w-full bg-white shadow-xl rounded-lg flex overflow-x-auto custom-scrollbar">
+    <div class="w-64 px-4">
+        <div class="h-16 flex items-center">
+            <a href="#" class="w-48 mx-auto bg-blue-600 hover:bg-blue-700 flex items-center justify-center text-gray-100 py-2 rounded space-x-2 transition duration-150">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <span>Compose</span>
+            </a>
+        </div>
+        <div class="px-2 pt-4 pb-8 border-r border-gray-300">
+           
+        </div>
+    </div>
     <div class="flex-1 px-2" x-data="{ checkAll: false, filterMessages: false }">
         <div class="h-16 flex items-center justify-between">
             <div class="flex items-center">
-                <div class="flex items-center">  
-                    <span class="text-l rounded-md font-bold" style="color: white;">checkbox</span>
-        
+                <div class="relative flex items-center px-0.5 space-x-0.5">
+                    
+                    
+                    
+                </div>
+                <div class="flex items-center">
+                   
+                    <span class="bg-gray-300">Action</span>
+                    
+                    
+                
                 </div>
             </div>
             <div class="px-2 flex items-center space-x-4">
