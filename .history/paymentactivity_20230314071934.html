@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/datepicker.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <title>Payment Activity</title>
+
+    <nav class="bg-white border-b-2 border-gray-200 px-2 sm:px-4 py-1 rounded dark:bg-gray-100">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="/" class="flex sm:items-left">
+              <img src="/assets/logo.png" class="h-11" alt="KM Logo" /> 
+              <span class="self-center align-middle pl-2 text-2xl font-Montserrat font-bold whitespace-nowrap" style="color: #22215B">Kuya Mic's Dormitory </span>
+          </a>
+          
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+              
+              <!-- <li>
+                <a href="#" class="block font-bold bg-gray-100 font-Montserrat text-base md:p-4" aria-current="page" style="color: #22215B; margin-left:-35rem;">Transaction Log</a>
+              </li> -->
+              <li>
+                <a href="index.html" class="block font-Montserrat rounded text-base md:text-gray-700 md:p-4" aria-current="page">Admin</a>
+              </li>
+              <li>
+                <a href="home.html" class="block shadow-xl bg-gray-100 font-Montserrat rounded-3xl text-base md:text-gray-700 md:p-4" aria-current="page">Dashboard</a>
+              </li>
+              <li>
+                <a href="home.html" class="block py-2 pl-0 pr-4" aria-current="page"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" class="h-1 mr-3 sm:h-10" alt="KM Logo" /></a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+</head>
+<body>
+
+  <div class="relative" style="margin: 4rem; margin-top: 3rem; margin-left: 4rem; ">
+    <h3 style="margin-bottom: 1rem;">Date:</h3>
+    <div class="absolute inset-y-0 left-0 items-center pl-2 pointer-events-none" style="padding-top: 3.2rem;">
+      
+      <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+    </div>
+    
+    
+    <input id="date" datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-10 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-900" placeholder="Select date" style="color: #22215B;";>
+  
+  </div>
+  
+    <div>
+      <div style="margin-left:3rem; padding: 1rem; margin-top: -10rem;">
+      <h3 class="font-Montserrat">Name of Tenant:</h3>
+      <input id="name" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style=" margin-top: 1rem; color: #22215B;" placeholder="Name of Tenant"> 
+    </div>
+  </div>
+
+ 
+    <div style="margin-left:3rem; padding: 1rem; margin-top: 3rem;">
+    <h3>Mode of Payment:</h3>
+    <select id="modepayment" name="paymentdetail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B; margin-top: 1rem;" placeholder="Mode of Payment">
+      <option value="">--</option>
+      <option value="gcash">Gcash</option>
+      <option value="cash">Cash-Over the Counter</option>
+    </select>
+  </div>
+  
+
+
+<!-- <div class="sm:fixed left-1/2 w-0.5 bg-gray-200" style="margin-top: -19rem; margin-left: -31rem; height: 21rem"></div> -->
+
+<div class="absolute top-15 right-12" style="margin-top: -15rem;">
+  <button onclick="addRow()" type="submit" class="inline-block mt-0 mb-4 text-white drop-shadow-2xl bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-md px-10 py-2.5 sm:text-center" style="background-color:#22215B; height: 3rem; width: 50rem;">Log Transaction</button>
+</div>
+
+
+
+    <div class="text-left" style="margin-left:25rem; margin-top: -15rem; padding: 1rem;">
+    <h3>Payment Detail:</h3>
+    <select id="paymentdetail" name="paymentdetail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B; margin-top: 1rem;" placeholder="Mode of Payment">
+      <option value="">--</option>
+      <option value="gcash">Gcash</option>
+      <option value="cash">Cash-Over the Counter</option>
+    </select>
+    <!-- <input type="submit" value="Submit"> -->
+  </div>
+
+  
+     <div class="inline-block" style="margin-left:25rem; margin-top: 1rem; padding: 1rem;">
+        <h3 style="padding-bottom: 0.5rem">Electricity:</h3>
+            <input id="electricity" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B;" placeholder=""> 
+    </div>
+
+
+    <div class="inline-block" style="margin-left:0.5rem; margin-top: 1rem;">
+        <h3 style="padding-bottom: 0.5rem">Water:</h3>
+            <input id="water" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B;" placeholder=""> 
+    </div>
+
+
+    <div class="inline-block" style="margin-left:0.5rem; margin-top: 1rem;">
+        <h3 style="padding-bottom: 0.5rem">Rent:</h3>
+            <input id="rent" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B;" placeholder=""> 
+    </div>
+
+
+ <div> 
+    <div class="inline-block" style="margin-left:25rem; margin-top: 1rem; padding: 1rem;">
+      <h3 style="padding-bottom: 0.5rem">Total Amount:</h3>
+          <input readonly id="totalamount"  type="text" class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B;" placeholder="₱ 0.00"> 
+  </div>
+
+
+  <div class="inline-block" style="margin-left:0.5rem; margin-top: 1rem;">
+      <h3 style="padding-bottom: 0.5rem">Amount Paid:</h3>
+          <input id="amntpaid" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 pl-2 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="color: #22215B;" placeholder=""> 
+          
+        </div>
+        
+        
+</div>
+</div>
+
+<div class="mt-4 relative overflow-x-auto shadow-md sm:rounded-lg" style="background-color:#22215B;">
+  <table id="table" class="w-full text-sm text-left" style="background-color: #ADDDD0">
+    
+    <thead class="text-md">
+      
+       
+        <tr><th scope="col" class="px-6 py-3">
+          Date
+    </th>
+      <th scope="col" class="px-6 py-3">
+          Name of Tenant
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Payment Detail
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Mode of Payment
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Total Amount
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Amount Paid
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Details
+      </th>
+     </tr>
+    </thead>
+   
+  
+
+    <tbody id="table1" style="background-color:#22215B; color:aliceblue;">
+      <tr class="border-b ">
+        <th scope="row" class="px-6 py-4 font-medium">
+            Monthly Rent
+        </th><th scope="row" class="px-6 py-4 font-medium">
+          ₱ 10,000
+      </th>
+    </th><th scope="row" class="px-6 py-4 font-medium">
+      ₱ 10,000
+  </th>
+</th><th scope="row" class="px-6 py-4 font-medium">
+  ₱ 10,000
+</th>
+</th><th scope="row" class="px-6 py-4 font-medium">
+  ₱ 10,000
+</th>
+</th><th scope="row" class="px-6 py-4 font-medium">
+  ₱ 10,000
+</th>
+</th><th scope="row" class="px-6 py-4 font-medium">
+ ...
+</th>
+    </tr>
+    
+      
+      
+  
+</tr>
+<script>
+  // var els = document.getElementById("table2").getElementsByTagName("td");
+
+  // for(var i=0;i<els.length;i++){
+  //   els[i].style.background = "green"   
+  // }
+    //function para maka add ng row inside table
+    function addRow() {
+          var info1 = document.getElementById("date").value;
+          var info2 = document.getElementById("name").value;
+          var info3 = document.getElementById("paymentdetail").value;
+          var info5 = document.getElementById("modepayment").value;
+          var info6 = document.getElementById("totalamount").value;
+          var info7 = document.getElementById("amntpaid").value;
+          var info8 = document.getElementById("details").value;
+
+          // Check if any of the text fields are empty
+          if (info1 === '' || info2 === '' || info3 === '' || info4 === '' || info5 === '' || info6 === '' || info7 === '' || info8 === '') {
+            alert('Please fill out all fields before adding a row.');
+            return;
+          } 
+
+          var tableRow = document.getElementById("table");
+          var row = document.createElement("tr");
+          var cell1 = document.createElement("td");
+          var cell2 = document.createElement("td");
+          var cell3 = document.createElement("td");
+          var cell4 = document.createElement("td");
+          var cell5 = document.createElement("td");
+          var cell6 = document.createElement("td");
+          var cell7 = document.createElement("td");
+          var cell8 = document.createElement("td");
+
+          cell1.innerHTML = info1;
+          cell2.innerHTML = info2;
+          cell3.innerHTML = info3;
+          cell4.innerHTML = info4;
+          cell5.innerHTML = info5;
+          cell6.innerHTML = info6;
+          cell7.innerHTML = info7;
+          cell8.innerHTML = info8;
+
+          row.appendChild(cell1);
+          row.appendChild(cell2);
+          row.appendChild(cell3);
+          row.appendChild(cell4);
+          row.appendChild(cell5);
+          row.appendChild(cell6);
+          row.appendChild(cell7);
+          row.appendChild(cell8);
+
+          tableRow.appendChild(row);
+    }
+
+  </script>
+         
+      </tbody>
+     
+  </table>
+  
+</div>
+  
+
+ 
+
+
+
+</body>
+</html>
+
