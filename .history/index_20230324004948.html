@@ -41,7 +41,6 @@
 
         </div>
     </div>
-    
     <div style="margin: 0rem;">
         <div class="w-full bg-cover bg-bottom" style="height: 50rem; background-image: url(/assets/background.png);">
         <img src="/assets/dorm.png" style="float: left;height:45rem; width:44rem; padding: 60px; border-radius: 10%">
@@ -49,41 +48,32 @@
         <h1 class="font-Montserrat font-bold leading-tight text-7xl mt-0 mb-2" style="color: #22215B; padding-top:0%; padding-left: 10;">Kuya Mic's Dormitory</h1>
 
         <h1 class="leading-tight text-4xl mt-0 mb-2" style="color: #7B7F9E; padding-top:2%; padding-left: 30%;">Administrator Log-in </h1>
+        <div style="padding-top: 2rem;">
+          <form action="/submit-form" method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="file-upload">
+                Choose file to upload:
+              </label>
+              <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="file-upload" type="file" name="file-upload">
+            </div>
+            <div class="flex items-center justify-between">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+          
+          <button onclick="location.href=''" type="button" class="text-white font-Montserrat font-medium font-xl rounded" style="background-color:#22215B; height:4rem; width: 50rem;">
+            Upload Contract (For Tenants)
+         </button>
+        <button onclick="location.href='login.html'" type="button" class="text-white font-Montserrat font-medium font-xl rounded" style="margin-top:1rem; background-color:#22215B; height:4rem; width: 50rem;">
+           Login
+           
+        </button>
+      
         
         
-        <div style="padding-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
-          <div style="width: 50rem; margin-right: 2rem;">
-              <button onclick="location.href='contractsubmission.html'" type="button" class="text-white font-Montserrat font-medium font-xl rounded" style="background-color:#22215B; height:4rem; width: 100%;">
-                  Upload Contract (For Tenants)
-              </button>
-          </div>
-          <div style="padding-top: 1rem; width: 50rem; margin-right: 2rem;">
-              <button onclick="location.href='uploadreqleave.html'" type="button" class="text-white font-Montserrat font-medium font-xl rounded" style="background-color:#22215B; height:4rem; width: 100%;">
-                  Upload Request to Leave Form (For Tenants)
-              </button>
-          </div>
-          <div style="padding-top: 1rem; width: 50rem; margin-right: 2rem;">
-              <button onclick="location.href='login.html'" type="button" class="text-white font-Montserrat font-medium font-xl rounded" style="background-color:#22215B; height:4rem; width: 100%;">
-                  Login
-              </button>
-          </div>
-          <div style="padding-top: 1rem; width: 50rem; margin-right: 2rem;">
-              <form action="/submit-form" method="post" enctype="multipart/form-data">
-                  <div class="mb-4">
-                      <label class="block text-gray-700 text-sm font-bold mb-2" for="file-upload">
-                          Choose file to upload:
-                      </label>
-                      <input style="background-color: #b6b6b6;" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="file-upload" type="file" name="file-upload">
-                  </div>
-                  <div class="flex items-center justify-between" >
-                      <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" style="background-color:#22215B;" type="submit">
-                          Submit
-                      </button>
-                  </div>
-              </form>
-              <div style="padding-top: 1rem;"></div>
-          </div>
-      </div>
+        </div>
 
      
     </div>
