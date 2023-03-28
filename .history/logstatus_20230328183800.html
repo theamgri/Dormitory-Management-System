@@ -54,9 +54,9 @@
             <tbody>
               <tr class="text-center">
                 <td><input id="date" datepicker type="text" class="block border-2  font-mono mt-1 ml-6 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" placeholder="Select date" style="color: #22215B;  width:15rem;"></td>
-                <td><input id="name" type="text" style="height: 3rem; width:20rem;" placeholder="Name of Tenant" class="block border-2 font-mono mt-1 ml-0 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400"></td>
-                <td><input id="subject" type="text" style="margin-left: 2rem; height: 3rem; width:15rem;" placeholder="Type of Subject" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400"></td>
-                <td><select id="status" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" style="color: #22215B; width:15rem;">
+                <td><input id="name" type="text" style="height: 3rem; width:15rem;" placeholder="Name of Tenant" class="block border-2 font-mono mt-1 ml-0 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400"></td>
+                <td><input id="subject" type="text" style="margin-left: 2rem; height: 3rem; width:25rem;" placeholder="Type of Subject" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400"></td>
+                <td><select id="status" class="block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" style="color: #22215B; width:25rem;">
                     <option>--</option> 
                     <option>Log in</option>
                     <option>Log out</option>
@@ -66,12 +66,9 @@
             </tbody>
             <thead>
               <tr>
-                <th class="text-center">
-                  <div class="flex justify-center">
-                    <button onclick="addRow()" type="submit" class="border-2 border-slate-700 drop-shadow-2xl mt-6 mb-6 text-xl text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-xl text-md px-10 py-0 sm:text-center lg:w-2/3 xl:w-1/2" style="background-color:#22215B; height: 3.5rem; width: 70rem;">
-                      + Add Log Status
-                    </button>
-                  </div>
+                <th>
+                  <button onclick="addRow()" type="submit" class="border-2 border-slate-700 drop-shadow-2xl mt-6 mb-6 text-xl text-white bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-xl text-md px-10 py-0 sm:text-center " style="margin-left: 10rem; background-color:#22215B; height: 3.5rem; width: 100rem;">+ Add Log Status</button>
+                  
                 </th>
               </tr>
                 <tr>
