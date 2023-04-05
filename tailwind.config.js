@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-import { Modal } from 'flowbite';
-
 module.exports = {
-  content: ["./*.{html, js, php}"],
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
+
