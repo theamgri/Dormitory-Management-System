@@ -27,12 +27,19 @@ class ContractController extends Controller
             'file' => 'required|mimes:pdf|max:2048',
         ]);
 
+        $fileName = $request->name . '.' . $request->file('file')->getClientOriginalExtension();
+        $filePath = $request->file('file')->storeAs('public/contracts', $fileName);
+
         $contract = new Contract;
         $contract->name = $validatedData['name'];
         $contract->date_issued = $validatedData['date_issued'];
         $contract-> date_expired = $validatedData['date_expired'];
-        $contract->file = $validatedData['file'];
+        $contract->file = $filePath;
         $contract->save();
+
+
+        $message = "Successfully uploaded contract!\n\nName: " . $contract->name . "\nDate Issued: " . $contract->date_issued . "\nDate Expire: " . $contract->date_expired;
+        session()->flash('success', $message);
 
         return redirect()->route('contracts.index');
     }
