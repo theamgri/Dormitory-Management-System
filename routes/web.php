@@ -6,8 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ServiceRequestController;
 use App\Http\Controllers\ContractController;
+use App\Http\Controllers\PendingContractController;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/pending-contracts', [PendingContractController::class, 'index'])->name('pendingcontracts.index');
+Route::post('/pending-contracts/approve/{id}', [PendingContractController::class, 'approve'])->name('pendingcontracts.approve');
+Route::post('/pending-contracts/disapprove/{id}', [PendingContractController::class, 'disapprove'])->name('pendingcontracts.disapprove');
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
 Route::get('/rooms/{room}/tenants/create', [TenantController::class, 'create'])->name('tenants.create');
@@ -38,4 +42,7 @@ Route::post('/service_requests/{serviceRequest}/progress_reports', [ServiceReque
 Route::get('/contracts', [ContractController::class, 'index'])->name('contracts.index');
 Route::get('/contracts/create', [ContractController::class, 'create'])->name('contracts.create');
 Route::post('/contracts', [ContractController::class, 'store'])->name('contracts.store');
+
+
+
 
