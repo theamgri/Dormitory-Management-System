@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Mail;
+use Swift_Attachment;
 use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Models\Tenant;
@@ -19,7 +20,7 @@ public function store(Request $request, Room $room)
     $request->validate([
         'first_name' => 'required',
         'last_name' => 'required',
-        'email' => 'required|email|unique:tenants,email',
+        'email' => 'required',
         'address' => 'required',
         'phone_number' => 'required',
         'status' => 'required'
@@ -27,6 +28,12 @@ public function store(Request $request, Room $room)
 
     $tenant = Tenant::create($request->all());
     $room->tenant()->save($tenant);
+    $email = $request->input('email');
+    $data = [
+        'title' => 'Contract',
+        'body' => 'Please find attached contract.pdf',
+    ];
+    
 
     $room = Room::findOrFail($request->get('room_id'));
     $room->is_occupied = true;

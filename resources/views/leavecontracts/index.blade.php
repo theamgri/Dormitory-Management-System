@@ -14,23 +14,19 @@
       <div style="padding-top: 1rem; width: 50rem; margin-right: 2rem;">
         <div class="container place-items-center">
                         <div class="panel-body place-items-center">
-                            <form action="{{ route('contracts.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('leave_contracts.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-6">
                                     <div class="form-group">
-                                        <label for="name">Name</label>
+                                        <label for="name">Name:</label>
                                         <input type="text" id="name" name="name" style="height: 3rem; width:20rem;" class="form-control block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" required>
                                        
                                     </div>
                                 </div>
-                                <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                <div class="grid gap-6 mb-6 md:grid-cols-1">
                                 <div class="form-group">
-                                    <label for="date_issued">Contract Date Issued</label>
-                                    <input type="date" class="form-control block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" id="date_issued" name="date_issued" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="date_expired">Contract End Date</label>
-                                    <input type="date" class="form-control block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" id="date_expired" name="date_expired" required>
+                                    <label for="date_vacancy">Date of Vacancy:</label>
+                                    <input type="date" class="form-control block border-2  font-mono mt-1 ml-4 mb-4 p-3.5 bg-gray-10 text-gray-900 sm:text-sm rounded-xl dark:bg-gray-100 dark:placeholder-gray-400" id="date_vacancy" name="date_vacancy" required>
                                 </div>
                             </div>
                                 <div class="form-group">
@@ -59,7 +55,7 @@
     const nameInput = document.getElementById('name');
     const pdfInput = document.getElementById('pdf');
     nameInput.addEventListener('input', () => {
-        const fileName = nameInput.value.replace(/\s+/g, '-').toLowerCase() + '.pdf';
+        const fileName = nameInput.value.replace(/\s+/g, '-').toLowerCase() + 'leave.pdf';
         pdfInput.setAttribute('name', 'pdf_' + fileName);
     });
 </script>

@@ -25,7 +25,7 @@
                 <a href="login.html" class="block bg-blue-700 font-Montserrat rounded text-xl md:bg-transparent md:text-blue-700 md:p-4" aria-current="page" style="color: #5A5B6A">Logout</a>
               </li>
               <li>
-                <a href="home.html" class="block shadow-xl bg-gray-100 font-Montserrat rounded-3xl text-base md:text-gray-700 md:p-4" aria-current="page">Dashboard</a>
+                <a href="{{ route('home.index') }}" class="block shadow-xl bg-gray-100 font-Montserrat rounded-3xl text-base md:text-gray-700 md:p-4" aria-current="page">Dashboard</a>
               </li>
               <li>
                 <a href="#" class="block py-2 pl-3 pr-4" aria-current="page"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" class="h-1 mr-3 sm:h-10" alt="KM Logo" /></a>

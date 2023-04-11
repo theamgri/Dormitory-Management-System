@@ -42,7 +42,7 @@
   </div>
 </a>
 
-
+  <a href="{{ route('pendingcontracts.index') }}">
   <div onclick="location.href='pencontracts.html'" class="inline-block md:w-32 lg:w-60 sm:mx-6 sm:mt-3 sm:max-w-sm rounded overflow-hidden shadow-lg" style="background-color: #ffffff">
     <img style="padding: 2rem;" src="/assets/penreg.png" alt="Pending Registration">
     <div class="px-6 py-4">
@@ -51,12 +51,12 @@
       </p>
     </div>
   </div>
-
+</a>
   
   </div>
-
+  
 <div class="items-center py-10 text-center mx-6 font-Montserrat">
-
+    <a href="{{ route('rooms.index') }}">
   <div onclick="location.href='Rooms.html'" class="inline-block md:w-32 lg:w-60 sm:mx-6 sm:mt-3 sm:max-w-sm rounded overflow-hidden shadow-lg" style="background-color: #ffffff">
     <img style="padding: 2rem;" src="/assets/tenant.png" alt="Sunset in the mountains">
     <div class="px-6 py-4">
@@ -65,7 +65,7 @@
        Tenants
       </p>
     </div>
-    
+</a>
   </div>
 
 

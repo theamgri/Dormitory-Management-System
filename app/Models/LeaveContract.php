@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Storage;
 
-class Contract extends Model
+class LeaveContract extends Model
 {
-    protected $fillable = ['name', 'date_issued', 'date_expired', 'file'];
+    protected $fillable = ['name', 'date_vacancy', 'file'];
     public function getFilePathAttribute($value)
     {
         return Storage::url($value);
