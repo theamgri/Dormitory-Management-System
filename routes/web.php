@@ -7,6 +7,9 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ServiceRequestController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PendingBillsController;
+use App\Http\Controllers\TenantReservationsController;
+use App\Http\Controllers\ReservedroomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +41,18 @@ Route::post('/service_requests/{serviceRequest}/progress_reports', [ServiceReque
 Route::get('/contracts', [ContractController::class, 'index'])->name('contracts.index');
 Route::get('/contracts/create', [ContractController::class, 'create'])->name('contracts.create');
 Route::post('/contracts', [ContractController::class, 'store'])->name('contracts.store');
-Route::get('/reservations', [ReservationsController::class, 'index'])->name('reservations.index');
-Route::post('/reservations', [ReservationsController::class, 'store'])->name('reservations.store');
-Route::get('/reservations/{reservation}/edit', [ReservationsController::class, 'edit'])->name('reservations.edit');
-Route::put('/reservations/{reservation}', [ReservationsController::class, 'update'])->name('reservations.update');
-Route::delete('/reservations/{reservation}', [ReservationsController::class, 'destroy'])->name('reservations.destroy');
 
+
+Route::get('/reservedroom', [ReservedRoomController::class, 'index'])->name('reservedroom.index');
+Route::get('/reservedroom/{reservedroom}', [ReservedRoomController::class, 'show'])->name('reservedroom.show');
+Route::get('/reservation/create/{reservedroom}', [TenantReservationsController::class, 'create'])->name('reservation.create');
+Route::post('/reservation/store/{reservedroom}', [TenantReservationsController::class, 'store'])->name('reservation.store');
+Route::get('/reservation/{reservation}/edit', [TenantReservationsController::class, 'edit'])->name('reservation.edit');
+Route::put('/reservation/{reservation}', [TenantReservationsController::class, 'update'])->name('reservation.update');
+Route::delete('/reservation/{reservation}', [TenantReservationsController::class, 'destroy'])->name('reservation.destroy');
+
+Route::get('rooms/{room}/pending-bills/create', [PendingBillsController::class, 'create'])->name('pending-bills.create');
+Route::post('rooms/{room}/pending-bills', [PendingBillsController::class, 'store'])->name('pending-bills.store');
+Route::get('pending-bills/{pendingBill}/edit', [PendingBillsController::class, 'edit'])->name('pending-bills.edit');
+Route::put('pending-bills/{pendingBill}', [PendingBillsController::class, 'update'])->name('pending-bills.update');
+Route::delete('pending-bills/{pendingBill}', [PendingBillsController::class, 'destroy'])->name('pending-bills.destroy');
