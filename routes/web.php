@@ -51,3 +51,6 @@ Route::get('/landing', [LandingController::class, 'index'])->name('landing.index
 
 
 
+
+
+
